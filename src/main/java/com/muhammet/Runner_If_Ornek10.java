@@ -1,6 +1,7 @@
 package com.muhammet;
 
 import java.util.Random;
+import java.util.Scanner;
 
 public class Runner_If_Ornek10 {
     public static void main(String[] args) {
@@ -24,6 +25,20 @@ public class Runner_If_Ornek10 {
          */
         Random random =  new Random();
         int Pc_Sayisi = random.nextInt(100);
+        int kullanicininCevabi;
+        Scanner sc = new Scanner(System.in);
+
+        do {
+            System.out.print("Lütfen bir sayı tahmin edin...: ");
+            kullanicininCevabi = sc.nextInt();
+            if (kullanicininCevabi == Pc_Sayisi) {
+                System.out.println("Tebrikler bildiniz.");
+            } else if (kullanicininCevabi > Pc_Sayisi) {
+                System.out.println("AŞAĞI");
+            } else {
+                System.out.println("YUKARI");
+            }
+        }while (kullanicininCevabi != Pc_Sayisi);
 
     }
 }
